@@ -1,0 +1,17 @@
+<div class="exemple">
+  <div *ngIf="loading">
+    <app-wait></app-wait>
+  </div>
+  <div *ngIf="!loading">
+    <div *ngIf="consommations.length > 0">
+      <p>power (somme des pwr dans les consommations liées aux contrats de l'utilisateur): {{ totalPuissance }} kW</p>
+      <p>Addresses (toutes les adresses de toutes les consommation liées aux contrats de l'utilisateur):</p>
+      <ul>
+        <li *ngFor="let item of consommations">
+          <strong>{{item.consommation.addresse}}</strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

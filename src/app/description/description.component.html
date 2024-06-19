@@ -1,0 +1,49 @@
+<h1>Un exemple de choses faites dans notre application</h1>
+
+L'objectif est d'implémenter un nouvel écran en utilisant qui apparaitra au clic sur le lien "fonctionnalité".
+
+Les données sont mises à disposition dans le service HttpMocksService et les types sont décrits dans domain.ts.
+
+Il faudra d'abord récuper la liste des id de contrats dans getContrats(), pour chacun d'entre eux, faire un appel
+à getConsommation(idDuContrat) puis intégrer les différentes valeurs.
+
+Nous pretterons attention à :
+<ul>
+  <li>
+    l'efficacité des appels au services HTTP ( temps total de chargement, caches lors d'allers/retours via la
+    navigation )
+  </li>
+  <li>
+    Au découpage composants/services.
+  </li>
+</ul>
+
+
+
+<h2>Attendu (en apparence)</h2>
+<h3>
+  Pendant le chargement
+</h3>
+Utiliser le composant existant app-wait qui présente un sablier qui tourne. Exemple:
+<div class="exemple">
+  <app-wait></app-wait>
+</div>
+<h3>
+  Après
+</h3>
+Afficher le total des puissance (somme) ainsi qu'une liste d'adresses. Comme dans l'écran suivant:
+<div class="exemple">
+  <p>power (somme des pwr dans les consommations liées aux contrats de l'utilisateur): 128 kW</p>
+  <p>Addresses (toutes les adresses de toutes les consommation liées aux contrats de l'utilisateur):</p>
+  <ul>
+    <li>
+      <b>3 rue des citrouilles</b>
+    </li>
+    <li>
+      <b>2 rue des cacahutes</b>
+    </li>
+    <li>
+      <b>1 rue du jus</b>
+    </li>
+  </ul>
+</div>
